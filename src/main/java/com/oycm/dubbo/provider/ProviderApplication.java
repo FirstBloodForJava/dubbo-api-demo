@@ -15,8 +15,8 @@ public class ProviderApplication {
         service.setRef(new ApiServiceImpl());
 
         // 启动 dubbo
-        DubboBootstrap. getInstance()
-                .application("provider")
+        DubboBootstrap.getInstance()
+                .application("dubbo-provider")
                 .registry(new RegistryConfig("zookeeper://192.168.125.158:2181"))
                 .protocol(new ProtocolConfig("dubbo", -1))
                 .service(service)
